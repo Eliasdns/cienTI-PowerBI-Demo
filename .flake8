@@ -1,0 +1,9 @@
+[flake8]
+extend-ignore = E501
+exclude =
+    __pycache__
+    .git
+    venv
+    .venv
+    .vscode
+    /*_cache

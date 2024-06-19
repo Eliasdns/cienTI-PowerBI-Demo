@@ -17,11 +17,11 @@ class Voto(models.Model):
         OUTRO = 'Outro'
 
     class Opiniao(models.IntegerChoices):
-        MUITO_FAVORAVEL = 1, 'Muito Favorável'
-        FAVORAVEL = 2, 'Favorável'
+        MUITO_FAVORAVEL = 5, 'Muito Favorável'
+        FAVORAVEL = 4, 'Favorável'
         NEUTRA = 3, 'Neutra'
-        DESFAVORAVEL = 4, 'Desfavorável'
-        MUITO_DESFAVORAVEL = 5, 'Muito Desfavorável'
+        DESFAVORAVEL = 2, 'Desfavorável'
+        MUITO_DESFAVORAVEL = 1, 'Muito Desfavorável'
 
     class Cor(models.TextChoices):
         RED = 'Red'

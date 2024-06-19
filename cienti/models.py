@@ -57,8 +57,8 @@ class Voto(models.Model):
     opiniao = models.PositiveSmallIntegerField(choices=Opiniao.choices)
     cor = models.CharField(max_length=10, choices=Cor.choices)
 
-    def __str__(self) -> str:
-        return f'#{self.pk}'
+    def __str__(self):
+        return f'#{self.pk}, {self.genero}, {self.idade}y, {self.dispositivo}, IA: {self.opiniao}, {self.cor}'
 
     @property
     def obj_as_payload(self):

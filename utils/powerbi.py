@@ -4,7 +4,7 @@ import requests
 from django.conf import settings
 
 
-# example_payload = {  # test-mostra-stream
+# example_payload = {  # To: test-mostra-stream
 #     'nome': 'Elias',
 #     'votos1': 10,
 #     'votos2': 98.6,
@@ -12,7 +12,7 @@ from django.conf import settings
 #     'votos4': 98.6,
 #     'votos5': 105,
 # }
-example_payload = [{  # mostra-stream
+example_payload = [{  # To: mostra-stream
     'total_votos': 21,
     'total_genero_masculino': 10,
     'total_genero_feminino': 6,
@@ -27,11 +27,11 @@ example_payload = [{  # mostra-stream
 }]
 
 
-def push_stream_api(payload: dict, endpoint: str = settings.POWERBI_SERVICE_STREAM_ENDPOINT):
+def push_stream_api(payload: list[dict[str, str | int | float]], endpoint: str = settings.POWERBI_SERVICE_STREAM_ENDPOINT):
     return requests.post(endpoint, json=payload, timeout=5)
 
 
-def push_csv(payload: dict, csv_path: str | Path = settings.CSV_STREAM_PATH):
+def push_stream_csv(payload: dict, csv_path: str | Path = settings.CSV_STREAM_PATH):
     with open(csv_path, 'a+', encoding='utf-8', newline='\n') as csv_file:  # newline='\r\n'
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(payload.values())

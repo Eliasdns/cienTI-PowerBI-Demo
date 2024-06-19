@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Q, Count, Avg
+from utils.signals import apply_auto_push
 
 
 class Voto(models.Model):
@@ -63,3 +64,6 @@ class Voto(models.Model):
     @property
     def obj_as_payload(self):
         return {f.name: getattr(self, f.name) for f in Voto._meta.fields}  # if f.name != 'id'
+
+
+apply_auto_push(Voto)

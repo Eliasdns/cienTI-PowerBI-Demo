@@ -28,6 +28,9 @@ example_payload = [{  # To: mostra-stream
 
 
 def push_stream_api(payload: list[dict[str, str | int | float]], endpoint: str = settings.POWERBI_SERVICE_STREAM_ENDPOINT):
+    payload[0]['min_media_opiniao'] = 1
+    payload[0]['max_media_opiniao'] = 5
+    payload[0]['grafico'] = 'Mostra'
     return requests.post(endpoint, json=payload, timeout=5)
 
 

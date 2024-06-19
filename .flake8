@@ -7,3 +7,5 @@ exclude =
     .venv
     .vscode
     /*_cache
+per-file-ignores =
+    utils/custom_tags.py:E302

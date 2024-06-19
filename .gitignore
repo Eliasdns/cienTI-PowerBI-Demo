@@ -5,7 +5,7 @@ __pycache__/
 *$py.class
 
 # Django stuff:
-*.log
+# *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -23,6 +23,7 @@ venv.bak/
 /static/
 /media/
 
+.vscode/
 db.*
 venv*.zip
-.vscode/
+/*.csv

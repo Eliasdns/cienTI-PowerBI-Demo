@@ -4,14 +4,6 @@ import requests
 from django.conf import settings
 
 
-# example_payload = {  # To: test-mostra-stream
-#     'nome': 'Elias',
-#     'votos1': 10,
-#     'votos2': 98.6,
-#     'votos3': 150,
-#     'votos4': 98.6,
-#     'votos5': 105,
-# }
 example_payload = [{  # To: mostra-stream
     'total_votos': 21,
     'total_genero_masculino': 10,
@@ -21,9 +13,9 @@ example_payload = [{  # To: mostra-stream
     'media_idade': 23.6,
     'media_opiniao': 3.5,
 
-    'grafico': 'Teste',
     'min_media_opiniao': 1,
     'max_media_opiniao': 5,
+    'grafico': 'Teste',
 }]
 
 

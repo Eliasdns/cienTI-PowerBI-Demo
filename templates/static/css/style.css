@@ -9,18 +9,17 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-
     background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8%);
 }
 
 .title {
-    color: hsl(198, 74%, 96%);
+    color: #edf8fc;
     background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
 }
 
 .form {
     width: 22rem;
-    background-color: hsl(205, 39%, 80%);
+    background-color: #b8cfe0;
     border-radius: 1rem;
 }
 

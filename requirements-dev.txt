@@ -1,7 +1,8 @@
 Django ~=4.2
+requests
+
 django-stubs ~=4.2
+types-requests
 ipython
 ipdb
 django-debug-toolbar
-requests
-types-requests

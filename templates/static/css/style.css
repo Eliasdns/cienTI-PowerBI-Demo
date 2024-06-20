@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Fira Code", "Courier New", Courier, monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+
+    background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8%);
+}
+
+.title {
+    color: hsl(198, 74%, 96%);
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+}
+
+.form {
+    width: 22rem;
+    background-color: hsl(205, 39%, 80%);
+    border-radius: 1rem;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.errorlist {
+    text-align: center;
+    list-style: none;
+    color: #F44336;  /* From: Material Red 500 */
+    font-size: 0.875rem;  /* From: Bootstrap $font-size-sm */
+}

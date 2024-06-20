@@ -7,7 +7,7 @@ class Voto(models.Model):
     class Genero(models.TextChoices):
         MASCULINO = 'M', 'Masculino'
         FEMININO = 'F', 'Feminino'
-        OUTRO = 'O', 'Outro/Prefiro não dizer'
+        OUTRO = 'O', 'Prefiro não dizer'
 
     class Dispositivo(models.TextChoices):
         DESKTOP = 'Desktop'
@@ -52,11 +52,11 @@ class Voto(models.Model):
             return aggregates
     objects = VotoManager()
 
-    genero = models.CharField(max_length=1, choices=Genero.choices, verbose_name='gênero')
     idade = models.PositiveSmallIntegerField()
-    dispositivo = models.CharField(max_length=10, choices=Dispositivo.choices)
+    genero = models.CharField(max_length=1, choices=Genero.choices, verbose_name='gênero')
+    dispositivo = models.CharField(max_length=10, choices=Dispositivo.choices, blank=True, null=True)
     opiniao = models.PositiveSmallIntegerField(choices=Opiniao.choices)
-    cor = models.CharField(max_length=10, choices=Cor.choices)
+    cor = models.CharField(max_length=10, choices=Cor.choices, blank=True, null=True)
 
     def __str__(self):
         return f'#{self.pk}, {self.genero}, {self.idade}y, {self.dispositivo}, IA: {self.opiniao}, {self.cor}'

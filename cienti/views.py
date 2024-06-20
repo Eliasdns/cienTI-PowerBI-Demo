@@ -1,6 +1,9 @@
-from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.views.generic import CreateView
+from .forms import VotoCreateForm
+from utils.view_tools import SuccessUrlToItselfMixin
 
 
-def index(request: HttpRequest) -> HttpResponse:
-    return render(request, 'cienti/index.html', {'title': 'cienTI'})
+class VotoCreate(SuccessUrlToItselfMixin, CreateView):
+    template_name = 'cienti/voto_create.html'
+    form_class = VotoCreateForm
+    extra_context = {'title': 'cienTI Power BI Demo'}

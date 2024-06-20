@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants as messages_constants
 
 
 # Local settings
@@ -128,7 +129,17 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Debugging Remaining settings
+# Messages settings
+MESSAGE_TAGS = {
+    messages_constants.DEBUG: 'alert-secondary',
+    messages_constants.INFO: 'alert-info',
+    messages_constants.SUCCESS: 'alert-success',
+    messages_constants.WARNING: 'alert-warning',
+    messages_constants.ERROR: 'alert-danger',
+}
+
+
+# Debugging settings
 if DEBUG and 'INTERNAL_IPS' not in locals():
     INTERNAL_IPS = [
         '127.0.0.1',
